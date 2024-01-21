@@ -49,11 +49,11 @@
             label5 = new Label();
             label3 = new Label();
             button2 = new Button();
-            guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
-            guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            PriceCb = new Guna.UI2.WinForms.Guna2TextBox();
+            ItemNameTb = new Guna.UI2.WinForms.Guna2TextBox();
+            ItemNumTb = new Guna.UI2.WinForms.Guna2TextBox();
             ItemsGV = new Guna.UI2.WinForms.Guna2DataGridView();
-            comboBox1 = new ComboBox();
+            CatCb = new ComboBox();
             label1 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ItemsGV).BeginInit();
@@ -97,6 +97,7 @@
             label7.Size = new Size(28, 31);
             label7.TabIndex = 14;
             label7.Text = "X";
+            label7.Click += label7_Click;
             // 
             // label4
             // 
@@ -120,11 +121,11 @@
             panel1.Controls.Add(label5);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(button2);
-            panel1.Controls.Add(guna2TextBox3);
-            panel1.Controls.Add(guna2TextBox2);
-            panel1.Controls.Add(guna2TextBox1);
+            panel1.Controls.Add(PriceCb);
+            panel1.Controls.Add(ItemNameTb);
+            panel1.Controls.Add(ItemNumTb);
             panel1.Controls.Add(ItemsGV);
-            panel1.Controls.Add(comboBox1);
+            panel1.Controls.Add(CatCb);
             panel1.Controls.Add(label1);
             panel1.Location = new Point(122, 34);
             panel1.Name = "panel1";
@@ -143,6 +144,7 @@
             button5.TabIndex = 18;
             button5.Text = "Edit";
             button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
             // 
             // button1
             // 
@@ -156,6 +158,7 @@
             button1.TabIndex = 17;
             button1.Text = "Delete";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // label8
             // 
@@ -217,72 +220,73 @@
             button2.TabIndex = 12;
             button2.Text = "Add";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
-            // guna2TextBox3
+            // PriceCb
             // 
-            guna2TextBox3.BorderColor = Color.FromArgb(255, 192, 128);
-            guna2TextBox3.BorderRadius = 2;
-            guna2TextBox3.CustomizableEdges = customizableEdges1;
-            guna2TextBox3.DefaultText = "";
-            guna2TextBox3.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox3.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox3.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox3.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox3.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2TextBox3.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox3.Location = new Point(145, 282);
-            guna2TextBox3.Name = "guna2TextBox3";
-            guna2TextBox3.PasswordChar = '\0';
-            guna2TextBox3.PlaceholderText = "";
-            guna2TextBox3.SelectedText = "";
-            guna2TextBox3.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2TextBox3.Size = new Size(174, 30);
-            guna2TextBox3.TabIndex = 11;
+            PriceCb.BorderColor = Color.FromArgb(255, 192, 128);
+            PriceCb.BorderRadius = 2;
+            PriceCb.CustomizableEdges = customizableEdges1;
+            PriceCb.DefaultText = "";
+            PriceCb.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            PriceCb.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            PriceCb.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            PriceCb.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            PriceCb.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            PriceCb.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            PriceCb.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            PriceCb.Location = new Point(145, 282);
+            PriceCb.Name = "PriceCb";
+            PriceCb.PasswordChar = '\0';
+            PriceCb.PlaceholderText = "";
+            PriceCb.SelectedText = "";
+            PriceCb.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            PriceCb.Size = new Size(174, 30);
+            PriceCb.TabIndex = 11;
             // 
-            // guna2TextBox2
+            // ItemNameTb
             // 
-            guna2TextBox2.BorderColor = Color.FromArgb(255, 192, 128);
-            guna2TextBox2.BorderRadius = 2;
-            guna2TextBox2.CustomizableEdges = customizableEdges3;
-            guna2TextBox2.DefaultText = "";
-            guna2TextBox2.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox2.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox2.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox2.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2TextBox2.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Location = new Point(145, 188);
-            guna2TextBox2.Name = "guna2TextBox2";
-            guna2TextBox2.PasswordChar = '\0';
-            guna2TextBox2.PlaceholderText = "";
-            guna2TextBox2.SelectedText = "";
-            guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2TextBox2.Size = new Size(174, 30);
-            guna2TextBox2.TabIndex = 10;
+            ItemNameTb.BorderColor = Color.FromArgb(255, 192, 128);
+            ItemNameTb.BorderRadius = 2;
+            ItemNameTb.CustomizableEdges = customizableEdges3;
+            ItemNameTb.DefaultText = "";
+            ItemNameTb.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            ItemNameTb.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            ItemNameTb.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            ItemNameTb.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            ItemNameTb.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            ItemNameTb.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            ItemNameTb.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            ItemNameTb.Location = new Point(145, 188);
+            ItemNameTb.Name = "ItemNameTb";
+            ItemNameTb.PasswordChar = '\0';
+            ItemNameTb.PlaceholderText = "";
+            ItemNameTb.SelectedText = "";
+            ItemNameTb.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            ItemNameTb.Size = new Size(174, 30);
+            ItemNameTb.TabIndex = 10;
             // 
-            // guna2TextBox1
+            // ItemNumTb
             // 
-            guna2TextBox1.BorderColor = Color.FromArgb(255, 192, 128);
-            guna2TextBox1.BorderRadius = 2;
-            guna2TextBox1.CustomizableEdges = customizableEdges5;
-            guna2TextBox1.DefaultText = "";
-            guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(145, 139);
-            guna2TextBox1.Name = "guna2TextBox1";
-            guna2TextBox1.PasswordChar = '\0';
-            guna2TextBox1.PlaceholderText = "";
-            guna2TextBox1.SelectedText = "";
-            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2TextBox1.Size = new Size(174, 30);
-            guna2TextBox1.TabIndex = 9;
+            ItemNumTb.BorderColor = Color.FromArgb(255, 192, 128);
+            ItemNumTb.BorderRadius = 2;
+            ItemNumTb.CustomizableEdges = customizableEdges5;
+            ItemNumTb.DefaultText = "";
+            ItemNumTb.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            ItemNumTb.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            ItemNumTb.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            ItemNumTb.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            ItemNumTb.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            ItemNumTb.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            ItemNumTb.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            ItemNumTb.Location = new Point(145, 139);
+            ItemNumTb.Name = "ItemNumTb";
+            ItemNumTb.PasswordChar = '\0';
+            ItemNumTb.PlaceholderText = "";
+            ItemNumTb.SelectedText = "";
+            ItemNumTb.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            ItemNumTb.Size = new Size(174, 30);
+            ItemNumTb.TabIndex = 9;
             // 
             // ItemsGV
             // 
@@ -296,7 +300,7 @@
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             ItemsGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            ItemsGV.ColumnHeadersHeight = 4;
+            ItemsGV.ColumnHeadersHeight = 30;
             ItemsGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
@@ -321,12 +325,12 @@
             ItemsGV.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
             ItemsGV.ThemeStyle.BackColor = Color.White;
             ItemsGV.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
-            ItemsGV.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            ItemsGV.ThemeStyle.HeaderStyle.BackColor = Color.DodgerBlue;
             ItemsGV.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            ItemsGV.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            ItemsGV.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             ItemsGV.ThemeStyle.HeaderStyle.ForeColor = Color.White;
             ItemsGV.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            ItemsGV.ThemeStyle.HeaderStyle.Height = 4;
+            ItemsGV.ThemeStyle.HeaderStyle.Height = 30;
             ItemsGV.ThemeStyle.ReadOnly = false;
             ItemsGV.ThemeStyle.RowsStyle.BackColor = Color.White;
             ItemsGV.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
@@ -335,17 +339,18 @@
             ItemsGV.ThemeStyle.RowsStyle.Height = 29;
             ItemsGV.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             ItemsGV.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            ItemsGV.CellContentClick += ItemsGV_CellContentClick;
             // 
-            // comboBox1
+            // CatCb
             // 
-            comboBox1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Food", "Beverage" });
-            comboBox1.Location = new Point(145, 234);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(174, 31);
-            comboBox1.TabIndex = 3;
-            comboBox1.Text = "Category";
+            CatCb.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            CatCb.FormattingEnabled = true;
+            CatCb.Items.AddRange(new object[] { "Food", "Beverage" });
+            CatCb.Location = new Point(145, 234);
+            CatCb.Name = "CatCb";
+            CatCb.Size = new Size(174, 31);
+            CatCb.TabIndex = 3;
+            CatCb.Text = "Category";
             // 
             // label1
             // 
@@ -374,6 +379,7 @@
             Name = "ItemsForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Order";
+            Load += ItemsForm_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)ItemsGV).EndInit();
@@ -390,11 +396,11 @@
         private Panel panel1;
         private Label label3;
         private Button button2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox PriceCb;
+        private Guna.UI2.WinForms.Guna2TextBox ItemNameTb;
+        private Guna.UI2.WinForms.Guna2TextBox ItemNumTb;
         private Guna.UI2.WinForms.Guna2DataGridView ItemsGV;
-        private ComboBox comboBox1;
+        private ComboBox CatCb;
         private Label label1;
         private Label label8;
         private Label label6;
